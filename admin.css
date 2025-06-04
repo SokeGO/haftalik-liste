@@ -1,0 +1,401 @@
+/* Yönetim Paneli Stilleri */
+
+.admin-body {
+    background-color: var(--light-bg);
+}
+
+/* Giriş Ekranı Stilleri */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+.login-error {
+    color: var(--danger-color);
+    margin-top: 15px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Admin Panel */
+.admin-panel {
+    display: flex;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    width: 250px;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.admin-menu h3 {
+    padding: 0 20px 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+.admin-menu ul li {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.admin-menu ul li i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.admin-menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-menu ul li.active {
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.admin-menu ul li.active:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+}
+
+/* Admin Content */
+.admin-content {
+    flex: 1;
+    padding: 30px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.admin-tab {
+    display: none;
+}
+
+.admin-tab.active {
+    display: block;
+}
+
+.admin-tab h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+/* Menu Editor */
+.menu-editor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.editor-day {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.editor-day-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-day-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.editor-meal-time {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.editor-meal-time:last-child {
+    border-bottom: none;
+}
+
+.editor-meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.editor-meal-header h5 {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.editor-meal-items {
+    margin-top: 10px;
+}
+
+.editor-meal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.editor-meal-item input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.editor-meal-item button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.editor-meal-item button:hover {
+    background-color: #c0392b;
+}
+
+.add-meal-item {
+    background-color: var(--light-color);
+    border: 1px dashed #ccc;
+    border-radius: var(--border-radius);
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+.add-meal-item:hover {
+    background-color: #e3e3e3;
+}
+
+.add-meal-item i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+
+/* Date Settings */
+.date-settings-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+/* Export/Import */
+.export-import-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.export-section,
+.import-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.export-section h4,
+.import-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.export-section p,
+.import-section p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.file-upload {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#file-name-display {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Preview */
+.preview-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Admin Actions */
+.admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.admin-actions button {
+    display: flex;
+    align-items: center;
+}
+
+.admin-actions button i {
+    margin-right: 8px;
+}
+
+/* Responsive Admin */
+@media (max-width: 992px) {
+    .admin-panel {
+        flex-direction: column;
+    }
+    
+    .admin-sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .admin-menu ul {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .admin-menu ul li {
+        white-space: nowrap;
+    }
+    
+    .admin-menu ul li.active:before {
+        display: none;
+    }
+    
+    .admin-menu h3 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 20px 15px;
+    }
+    
+    .menu-editor,
+    .export-import-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-actions {
+        flex-direction: column;
+    }
+    
+    .admin-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+}

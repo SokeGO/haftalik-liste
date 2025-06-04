@@ -1,0 +1,147 @@
+/* Açık Tema Stil Dosyası */
+body.light-theme {
+    /* TEMEL RENK DEĞİŞKENLERİ (AÇIK TEMA) */
+    --primary-color: #E53935; /* Daha canlı bir kırmızı */
+    --secondary-color: #00ACC1; /* Camgöbeği */
+    --accent-color: #FFB300; /* Kehribar */
+    --danger-color: #D32F2F;
+
+    --bg-color: #f4f6f8; /* Ana arka plan (çok açık gri) */
+    --card-bg: #ffffff;  /* Kartlar, header/footer gibi bölümler için beyaz */
+    --light-bg: #ffffff; /* --card-bg ile aynı olabilir veya biraz farklı bir ton */
+    --border-color: #d1d8e0; /* Daha belirgin bir kenarlık rengi */
+
+    --text-color: #2c3e50;         /* Ana metin rengi (koyu mavi-gri) */
+    --text-muted: #566573;       /* İkincil metin (biraz daha açık) */
+    --heading-color: #1a252f;      /* Başlıklar için daha koyu */
+    --icon-color: #34495e;         /* İkonlar için (tema switch vb.) */
+
+    /* Diğer özel değişkenler */
+    --active-day-light-bg-color: #e3f2fd; 
+    --active-day-light-border-color: #90caf9; 
+    --active-day-light-text-color: #1e88e5;
+
+    --theme-button-light-bg: rgba(0, 0, 0, 0.04);
+    --theme-button-light-border-color: rgba(0, 0, 0, 0.1);
+    --theme-button-light-hover-bg: rgba(0, 0, 0, 0.08);
+    --theme-button-light-hover-border-color: rgba(0, 0, 0, 0.18);
+
+    /* Yemek zamanları (isteğe bağlı açık tema uyarlaması) */
+    --meal-breakfast: #FFA000; 
+    --meal-lunch: #388E3C;
+    --meal-dinner: #1976D2;
+}
+
+body.light-theme {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    background-image: none; /* Koyu temadaki gradient'i ezelim */
+}
+
+/* Header & Logo */
+body.light-theme header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--border-color);
+}
+body.light-theme .logo h1 {
+    color: var(--heading-color);
+}
+body.light-theme .logo p {
+    color: var(--primary-color); 
+}
+
+/* Genel Bölüm Başlıkları */
+body.light-theme .section-title {
+    color: var(--heading-color);
+}
+body.light-theme .section-subtitle {
+    color: var(--text-muted);
+}
+
+/* Beslenme Önerileri (Features) Bölümü Başlıkları için Spesifik Kurallar */
+body.light-theme .features .section-title,
+body.light-theme .features .section-subtitle {
+    color: var(--heading-color); /* Koyu tema (style.css) .features .section-title kuralını ezmek için */
+}
+body.light-theme .features .section-subtitle {
+    color: var(--text-muted); /* Alt başlık için de ayrıca belirtelim */
+}
+
+/* Menü Bilgisi Bölümü */
+body.light-theme .menu-info {
+    background-color: var(--card-bg);
+    color: var(--text-muted); 
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+body.light-theme .menu-info p strong {
+    color: var(--text-color); /* Strong metni biraz daha belirgin yapalım */
+}
+
+/* Yemek Listesi Elemanları */
+body.light-theme .day-header {
+    background-color: var(--primary-color); 
+    color: white; /* Bu sabit kalabilir veya açık tema için farklı bir değişken atanabilir */
+}
+body.light-theme .day-header h3,
+body.light-theme .day-header p {
+    color: white;
+}
+body.light-theme .meal-time h4 {
+    color: var(--heading-color);
+}
+body.light-theme .meal-time h4 i.fa-sun { color: var(--meal-breakfast); }
+body.light-theme .meal-time h4 i.fa-utensils { color: var(--meal-lunch); }
+body.light-theme .meal-time h4 i.fa-moon { color: var(--meal-dinner); }
+
+body.light-theme .meal-item {
+    color: var(--text-color);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* Beslenme Önerileri Kartları */
+body.light-theme .feature-card {
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+body.light-theme .feature-card:hover {
+     border-color: var(--secondary-color);
+}
+body.light-theme .feature-icon {
+    background-color: var(--secondary-color); /* İkon arka planı */
+}
+body.light-theme .feature-icon i {
+    color: white; /* İkon rengi */
+}
+body.light-theme .feature-card h3 {
+    color: var(--heading-color);
+}
+body.light-theme .feature-card p {
+    color: var(--text-muted);
+}
+
+/* Footer */
+body.light-theme footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+body.light-theme .footer-content, 
+body.light-theme .footer-bottom p {
+    color: var(--text-muted);
+}
+body.light-theme .footer-logo h3,
+body.light-theme .footer-links h4,
+body.light-theme .footer-contact h4 {
+    color: var(--heading-color);
+}
+body.light-theme .footer-links ul li a {
+    color: var(--primary-color);
+}
+body.light-theme .footer-links ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Tema Değiştirici Butonla ilgili eski, çakışan kurallar kaldırıldı */
+/* Butonun stil ve davranışı js/main.js içindeki dinamik CSS ile yönetiliyor */

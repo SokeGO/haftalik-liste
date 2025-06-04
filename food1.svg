@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#2d2d2d"/>
+  
+  <!-- Türk Yemekleri - Kebap ve Pilav -->
+  <g>
+    <!-- Plate -->
+    <ellipse cx="400" cy="300" rx="200" ry="50" fill="#f5f5f5" stroke="#cccccc" stroke-width="3"/>
+    
+    <!-- Pilav (Rice) -->
+    <ellipse cx="400" cy="280" rx="150" ry="40" fill="#f8e8b0"/>
+    
+    <!-- Kebap (Meat) -->
+    <path d="M350 250 Q400 220 450 250 Q430 280 370 280 Q350 270 350 250" fill="#8B4513"/>
+    <path d="M330 260 Q380 230 430 260 Q410 290 350 290 Q330 280 330 260" fill="#a0522d"/>
+    
+    <!-- Vegetables -->
+    <circle cx="320" cy="250" r="15" fill="#ff6347"/> <!-- Domates (Tomato) -->
+    <path d="M320 235 L325 225 L315 225 Z" fill="#228b22"/> <!-- Domates Sapı (Tomato Stem) -->
+    
+    <path d="M450 250 Q460 240 470 250 Q460 260 450 250" fill="#228b22"/> <!-- Biber (Pepper) -->
+    <path d="M480 260 Q490 250 500 260 Q490 270 480 260" fill="#228b22"/> <!-- Biber (Pepper) -->
+    
+    <!-- Garnish -->
+    <path d="M350 230 Q360 220 370 230 Q360 240 350 230" fill="#32cd32"/> <!-- Maydanoz (Parsley) -->
+    <path d="M430 230 Q440 220 450 230 Q440 240 430 230" fill="#32cd32"/> <!-- Maydanoz (Parsley) -->
+  </g>
+  
+  <!-- Plate Reflection -->
+  <ellipse cx="400" cy="300" rx="180" ry="45" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Steam Effect -->
+  <path d="M370 220 Q380 200 390 220 M400 210 Q410 190 420 210 M430 220 Q440 200 450 220" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="400" y="400" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Haftalık Yemek Menüsü</text>
+  <text x="400" y="430" font-family="Arial" font-size="16" fill="#cccccc" text-anchor="middle">02.06.2025 - 08.06.2025 tarihleri arası</text>
+</svg>

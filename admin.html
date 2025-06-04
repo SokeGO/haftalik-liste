@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetim Paneli - Suluca Kampüs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Suluca Kampüs</h1>
+                <p>Yönetim Paneli</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="admin.html" class="active">Yönetim</a></li>
+                </ul>
+                <div class="theme-switch">
+                    <button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Giriş Ekranı -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-container">
+            <h2>Yönetim Paneli Girişi</h2>
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="password">Şifre:</label>
+                    <input type="password" id="password" placeholder="Şifrenizi girin">
+                </div>
+                <button id="login-btn" class="btn primary-btn">Giriş Yap</button>
+                <p id="login-error" class="login-error"></p>
+            </div>
+        </div>
+    </div>
+
+    <section class="admin-section" id="admin-content" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Yemek Listesi Yönetimi</h2>
+            <p class="section-subtitle">Haftalık yemek listesini düzenleyin ve güncelleyin</p>
+            
+            <div class="admin-panel">
+                <div class="admin-sidebar">
+                    <div class="admin-menu">
+                        <h3>Menü</h3>
+                        <ul>
+                            <li class="active" data-tab="edit-menu"><i class="fas fa-edit"></i> Yemek Listesi Düzenle</li>
+                            <li data-tab="date-settings"><i class="fas fa-calendar-alt"></i> Tarih Ayarları</li>
+                            <li data-tab="export-import"><i class="fas fa-file-export"></i> Dışa/İçe Aktar</li>
+                            <li data-tab="preview"><i class="fas fa-eye"></i> Önizleme</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admin-content">
+                    <!-- Yemek Listesi Düzenleme Sekmesi -->
+                    <div class="admin-tab active" id="edit-menu">
+                        <h3>Haftalık Yemek Listesi Düzenleme</h3>
+                        <div class="menu-editor">
+                            <!-- JavaScript ile doldurulacak -->
+                        </div>
+                    </div>
+                    
+                    <!-- Tarih Ayarları Sekmesi -->
+                    <div class="admin-tab" id="date-settings">
+                        <h3>Tarih Ayarları</h3>
+                        <div class="date-settings-form">
+                            <div class="form-group">
+                                <label for="start-date">Başlangıç Tarihi:</label>
+                                <input type="date" id="start-date" name="start-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="end-date">Bitiş Tarihi:</label>
+                                <input type="date" id="end-date" name="end-date">
+                            </div>
+                            <button type="button" id="update-dates" class="btn primary-btn">Tarihleri Güncelle</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Dışa/İçe Aktar Sekmesi -->
+                    <div class="admin-tab" id="export-import">
+                        <h3>Dışa/İçe Aktar</h3>
+                        <div class="export-import-options">
+                            <div class="export-section">
+                                <h4>Dışa Aktar</h4>
+                                <p>Mevcut yemek listesini JSON formatında indirin:</p>
+                                <button type="button" id="export-json" class="btn secondary-btn"><i class="fas fa-download"></i> JSON İndir</button>
+                            </div>
+                            <div class="import-section">
+                                <h4>İçe Aktar</h4>
+                                <p>JSON formatında yemek listesi yükleyin:</p>
+                                <div class="file-upload">
+                                    <input type="file" id="import-file" accept=".json">
+                                    <label for="import-file" class="btn secondary-btn"><i class="fas fa-upload"></i> Dosya Seç</label>
+                                </div>
+                                <div id="file-name-display">Dosya seçilmedi</div>
+                                <button type="button" id="import-json" class="btn primary-btn" disabled>İçe Aktar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Önizleme Sekmesi -->
+                    <div class="admin-tab" id="preview">
+                        <h3>Yemek Listesi Önizleme</h3>
+                        <div class="preview-container">
+                            <!-- JavaScript ile doldurulacak -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-actions">
+                <button type="button" id="save-changes" class="btn primary-btn"><i class="fas fa-save"></i> Değişiklikleri Kaydet</button>
+                <button type="button" id="reset-changes" class="btn danger-btn"><i class="fas fa-undo"></i> Değişiklikleri Sıfırla</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Adana Suluca Açık Ceza İnfaz Kurumu</h3>
+                    <p>Yönetim Paneli</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="admin.html">Yönetim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Adana, Türkiye</p>
+                    <p><i class="fas fa-phone"></i> 0533 426 4353</p>
+                    <p><i class="fas fa-envelope"></i> shislek@outlook.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Adana Suluca Açık Ceza İnfaz Kurumu. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

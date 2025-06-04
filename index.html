@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suluca Kampüs - Yemek Listesi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style" disabled>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Suluca Kampüs</h1>
+                <p>Haftalık Yemek Listesi</p>
+            </div>
+            <nav>
+                <!-- Navigasyon linkleri (ul) kaldırıldı -->
+                <div class="theme-switch">
+                    <button id="theme-toggle" class="theme-toggle-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Haftalık Yemek Listesi</h2>
+            <p class="section-subtitle">02.06.2025 - 08.06.2025 tarihleri arası</p>
+            
+            <div class="menu-container">
+                <!-- Yemek listesi JavaScript ile doldurulacak -->
+            </div>
+
+            <div class="menu-info">
+                <p><strong>NOT:</strong> YEMEKLER, SABAH KAHVALTISI SAAT: 07:00'DE, ÖĞLEN YEMEĞİ SAAT: 12:00'DE VE AKŞAM YEMEĞİ SAAT: 18:00'DA</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Beslenme Önerileri</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Dengeli Beslenme</h3>
+                    <p>Günlük beslenmenizde protein, karbonhidrat ve yağ dengesine dikkat edin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <h3>Sebze ve Meyve</h3>
+                    <p>Günde en az 5 porsiyon sebze ve meyve tüketmeye özen gösterin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-glass-water"></i>
+                    </div>
+                    <h3>Su Tüketimi</h3>
+                    <p>Günde en az 2 litre su içmeyi unutmayın.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Düzenli Öğünler</h3>
+                    <p>Öğün atlamamaya ve düzenli beslenmeye özen gösterin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Suluca Kampüs</h3>
+                    <p>Haftalık Yemek Listesi</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Erişim</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="admin.html">Yönetim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Adana, Türkiye</p>
+                    <p><i class="fas fa-phone"></i> 0533 426 4353</p>
+                    <p><i class="fas fa-envelope"></i> shislek@outlook.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Suluca Kampüs. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Sayfa yüklendiğinde yemek listesini yeniden oluştur
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Yemek listesini göster
+        //     if (typeof renderMenuList === 'function') {
+        //         renderMenuList();
+        //     }
+        // });
+    </script>
+</body>
+</html>
